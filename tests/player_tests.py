@@ -33,7 +33,3 @@ class PlayerTest(unittest.TestCase):
 
         target.moves_left = 5
         self.assertEqual(5, target.moves_left)
-        
-
-if __name__ == '__main__':
-    unittest.main()
