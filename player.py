@@ -1,4 +1,4 @@
-class Player(object):
+class Player:
 
     MOVES_LEFT = 3
 
