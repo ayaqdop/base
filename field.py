@@ -9,7 +9,7 @@ class Field(object):
         alp = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p']
         for i in range(16):
             for row in range(24):
-                field_len.append(' ')
+                field_len.append(" ")
             self.field.append(field_len)
             field_len = []
     
