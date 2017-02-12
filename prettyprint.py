@@ -13,7 +13,6 @@ RESET = "\033[0;0m"
 
 class PrettyPrint:
 
-
     def colored_print(self, text, color, end=''):
         sys.stdout.write(color)
         print(text, end=end)
