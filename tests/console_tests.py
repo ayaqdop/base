@@ -3,9 +3,9 @@ import sys
 
 sys.path.insert(0, "home/ayaqdop/base")
 
-import prettyprint
+import console
 
-class PrettyPrintTest(unittest.TestCase):
+class ConsoleTest(unittest.TestCase):
 
     def test_colored_print(self):
         self.assertEqual("\033[1;30m", prettyprint.BLACK)

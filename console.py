@@ -11,7 +11,7 @@ WHITE = "\033[1;37m"
 
 RESET = "\033[0;0m"
 
-class PrettyPrint:
+class Console:
 
     def colored_print(self, text, color, end=''):
         sys.stdout.write(color)
