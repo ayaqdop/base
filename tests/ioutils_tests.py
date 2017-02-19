@@ -12,8 +12,11 @@ class IOTest(unittest.TestCase):
 
     def test_is_valid_letter_true(self):
         target = IOUtils()
-        self.assertTrue(target.is_valid_letter())
+        self.assertTrue(target.is_valid_letter('a'))
+        self.assertTrue(target.is_valid_letter('A'))
 
     def test_is_valid_letter_false(self):
         target = IOUtils()
-        self.assertFalse(target.is_valid_letter())
+        self.assertFalse(target.is_valid_letter('w'))
+        self.assertFalse(target.is_valid_letter('W'))
+
