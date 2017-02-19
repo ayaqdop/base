@@ -5,7 +5,7 @@ import string
 class IOUtils:
 
 
-    def input_parser():
+    def input_parser(self):
         input_value = re.split('\W+',input("Enter positions: "))
     
         if(input_value[0] == input_value[1] 
@@ -28,10 +28,10 @@ class IOUtils:
             print(input_value[0], input_value[1])
             #current pos = {curX:input_value[0][0], curY:input_value[0][1:]}
 
-    def is_valid_letter():
+    def is_valid_letter(self):
+        return False
         #if (not input_value[0][0] in 'abcdefghijklmnopABCDEFGHIJKLMNOP' 
          #   or not input_value[1][0] in 'abcdefghijklmnopABCDEFGHIJKLMNOP'):
 
 
 
-IOUtils.input_parser()
