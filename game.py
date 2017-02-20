@@ -9,5 +9,5 @@ class Game:
         self.score_limit = 0
         self.turn = None
         self.ball = Ball()
-        self.team = None
+        self.teams = None
         self.field = Field()
