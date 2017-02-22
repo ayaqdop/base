@@ -20,3 +20,70 @@ class IOTest(unittest.TestCase):
         self.assertFalse(target.is_valid_letter('w'))
         self.assertFalse(target.is_valid_letter('W'))
 
+    def test_is_same_position_true(self):
+        target = IOUtils()
+        self.assertTrue(target.is_same_position(23,25))
+
+    def test_is_same_position_false(self):
+        target = IOUtils()
+        self.assertFalse(target.is_same_position(23,23))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

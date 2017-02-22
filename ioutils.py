@@ -28,6 +28,16 @@ class IOUtils:
             print(input_value[0], input_value[1])
             #current pos = {curX:input_value[0][0], curY:input_value[0][1:]}
 
+    def is_valid_number(self, ):
+        pass
+
+    def is_same_position(self, pos1,pos2):
+        if pos1 != pos2:
+            return True
+        else:
+            return False
+
+
     def is_valid_letter(self, letter):
         letter = letter.lower()
         if "a" <= letter <= "p":
