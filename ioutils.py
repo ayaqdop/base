@@ -31,8 +31,8 @@ class IOUtils:
     def is_valid_number(self, ):
         pass
 
-    def is_not_same_position(self, pos1,pos2):
-        if pos1 != pos2:
+    def is_not_same_pos(self, pos1,pos2):
+        if str(pos1) != str(pos2):
             return True
         else:
             return False
