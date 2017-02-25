@@ -30,7 +30,7 @@ class IOUtils:
     def is_letter(self,letter):
         return letter.isalpha()
 
-    def is_not_same_pos(self, pos1,pos2):
+    def is_not_same_position(self, pos1,pos2):
         return pos1 != pos2
             
     def is_valid_letter(self, letter):
