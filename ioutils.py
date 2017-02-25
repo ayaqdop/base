@@ -21,23 +21,18 @@ class IOUtils:
             or not int(input_value[1][1:]) <=25):
             print("Something wrong with your values, please retype your player and move position: ")
             input_parser()
-
         else:
             input_value[0] = input_value[0][0].lower()+input_value[0][1:]
             input_value[1] = input_value[1][0].lower()+input_value[1][1:]
             print(input_value[0], input_value[1])
             #current pos = {curX:input_value[0][0], curY:input_value[0][1:]}
 
-    def is_valid_number(self, ):
-        pass
+    def is_letter(self,letter):
+        return letter.isalpha()
 
     def is_not_same_pos(self, pos1,pos2):
-        if str(pos1) != str(pos2):
-            return True
-        else:
-            return False
-
-
+        return pos1 != pos2
+            
     def is_valid_letter(self, letter):
         letter = letter.lower()
         if "a" <= letter <= "p":
@@ -46,3 +41,4 @@ class IOUtils:
             return False
 
 
+IOUtils.input_parser(self)

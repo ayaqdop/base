@@ -28,45 +28,9 @@ class IOTest(unittest.TestCase):
         target = IOUtils()
         self.assertFalse(target.is_not_same_pos(23,23))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def test_is_letter(self):
+        target = IOUtils()
+        self.assertTrue(target.is_letter('g'))
 
 
 
