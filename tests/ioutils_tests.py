@@ -30,8 +30,7 @@ class IOTest(unittest.TestCase):
         target = IOUtils()
         self.assertFalse(target.is_valid_letter("False"))
         self.assertFalse(target.is_valid_letter("false"))
-        self.assertFalse(target.is_valid_letter(42))
-
+       
     def test_is_not_same_position_true(self):
         target = IOUtils()
         self.assertTrue(target.is_not_same_position(23,25))

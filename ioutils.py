@@ -35,7 +35,5 @@ class IOUtils:
             
     def is_valid_letter(self, letter):
         letter = letter.lower()
-        if "a" <= letter <= "p":
-            return True
-        else:
-            return False
+        return len(letter)==1 and "a" <= letter <= "p"
+             
