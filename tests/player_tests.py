@@ -33,3 +33,7 @@ class PlayerTest(unittest.TestCase):
 
         target.moves_left = 5
         self.assertEqual(5, target.moves_left)
+
+    def test_str(self):
+        target = Player("Test Team", 42)
+        self.assertEqual("42", str(target))

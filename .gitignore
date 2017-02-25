@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.py.save
 
 # C extensions
 *.so
@@ -87,3 +88,7 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Custom scripts
+*.sh
+*.ps1

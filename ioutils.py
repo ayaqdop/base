@@ -39,6 +39,3 @@ class IOUtils:
             return True
         else:
             return False
-
-
-IOUtils.input_parser(self)
