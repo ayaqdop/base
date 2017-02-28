@@ -36,12 +36,13 @@ class IOTest(unittest.TestCase):
         self.assertTrue(target.is_not_same_position("a23","a25"))
         self.assertFalse(target.is_not_same_position("a23","a23"))
         
-    def test_is_valid_number_false(self):
+    def test_is_valid_number(self):
         target = IOUtils()
-        self.assertFalse(target.is_valid_number("46"))
         self.assertFalse(target.is_valid_number("g"))
-        self.assertFalse(target.is_valid_number("-14"))
-        
+        self.assertFalse(target.is_valid_number("-1"))
+        self.assertFalse(target.is_valid_number("26"))
+        for i in range(0,26):
+            self.assertTrue(target.is_valid_number(str(i)))
         
 
        
