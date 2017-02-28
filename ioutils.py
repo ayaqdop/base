@@ -36,11 +36,6 @@ class IOUtils:
         return len(letter)==1 and letter.isalpha() and "a" <= letter <= "p"
 
     def is_valid_number(self, number):
-        number = str(number)
-        if number.isnumeric():
-            number = int(number) 
-            if 0 <= number <= 25: return True
-            else: return False 
-        else: return False
-    
+        return number.isnumeric() and 0 <= int(number) <= 25
+            
 

@@ -43,5 +43,7 @@ class IOTest(unittest.TestCase):
         target = IOUtils()
         self.assertFalse(target.is_valid_number("46"))
         self.assertFalse(target.is_valid_number("g"))
-        self.assertFalse(target.is_valid_number(55))
-        self.assertFalse(target.is_valid_number(7))
+        self.assertFalse(target.is_valid_number("14"))
+        
+
+       
