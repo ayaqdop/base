@@ -26,16 +26,21 @@ class IOTest(unittest.TestCase):
             else:
                 self.assertFalse(target.is_valid_letter(c))
 
-    def test_is_valid_letter_false(self):
+    def test_is_valid_position(self):
         target = IOUtils()
-        self.assertFalse(target.is_valid_letter("False"))
-        self.assertFalse(target.is_valid_letter("false"))
-       
+        self.assertTrue(target.is_valid_position("a23"))
+        self.assertTrue(target.is_valid_position("s23"))
+        
     def test_is_not_same_position(self):
         target = IOUtils()
         self.assertTrue(target.is_not_same_position("a23","a25"))
         self.assertFalse(target.is_not_same_position("a23","a23"))
-        
+    
+    def test_is_valid_letter_false(self):
+        target = IOUtils()
+        self.assertFalse(target.is_valid_letter("False"))
+        self.assertFalse(target.is_valid_letter("false")) 
+
     def test_is_valid_number(self):
         target = IOUtils()
         self.assertFalse(target.is_valid_number("g"))

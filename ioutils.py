@@ -27,7 +27,6 @@ class IOUtils:
             print(input_value[0], input_value[1])
             #current pos = {curX:input_value[0][0], curY:input_value[0][1:]}
 
-   
     def is_not_same_position(self, pos1,pos2):
         return pos1 != pos2
             
@@ -37,5 +36,10 @@ class IOUtils:
 
     def is_valid_number(self, number):
         return number.isnumeric() and 0 <= int(number) <= 25
+
+    def is_valid_position(self, position):
+        letter = position[0]
+        number = position[1:]
+        return is_valid_letter(letter) and is_valid_number(number)
             
 
