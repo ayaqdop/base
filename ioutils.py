@@ -40,6 +40,6 @@ class IOUtils:
     def is_valid_position(self, position):
         letter = position[0]
         number = position[1:]
-        return is_valid_letter(letter) and is_valid_number(number)
+        return self.is_valid_letter(letter) and self.is_valid_number(number)
             
 
