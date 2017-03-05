@@ -42,4 +42,4 @@ class IOUtils:
         return self.is_valid_letter(letter) and self.is_valid_number(number)
 
     def convert_letter(self, letter):
-        pass
+        return ord(letter) - ord("a") + 1

@@ -55,4 +55,4 @@ class IOTest(unittest.TestCase):
         target = IOUtils()
 
         for i, c in enumerate(string.ascii_lowercase):
-            self.assertEqual(i, target.convert_letter(c))
+            self.assertEqual(i + 1, target.convert_letter(c))
