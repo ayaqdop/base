@@ -31,7 +31,6 @@ class IOUtils:
         return pos1 != pos2
             
     def is_valid_letter(self, letter):
-        letter = letter.lower()
         return len(letter)==1 and letter.isalpha() and "a" <= letter <= "p"
 
     def is_valid_number(self, number):
@@ -41,5 +40,3 @@ class IOUtils:
         letter = position[0]
         number = position[1:]
         return self.is_valid_letter(letter) and self.is_valid_number(number)
-            
-

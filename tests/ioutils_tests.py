@@ -29,7 +29,7 @@ class IOTest(unittest.TestCase):
     def test_is_valid_position(self):
         target = IOUtils()
         self.assertTrue(target.is_valid_position("a23"))
-        self.assertTrue(target.is_valid_position("s23"))
+        self.assertFalse(target.is_valid_position("s23"))
         
     def test_is_not_same_position(self):
         target = IOUtils()
