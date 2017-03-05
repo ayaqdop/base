@@ -20,12 +20,6 @@ class IOTest(unittest.TestCase):
             else:
                 self.assertFalse(target.is_valid_letter(c))
 
-        for c in string.ascii_uppercase:
-            if c < 'Q':
-                self.assertTrue(target.is_valid_letter(c))
-            else:
-                self.assertFalse(target.is_valid_letter(c))
-
     def test_is_valid_position(self):
         target = IOUtils()
         self.assertTrue(target.is_valid_position("a23"))
