@@ -51,5 +51,8 @@ class IOTest(unittest.TestCase):
         for i in range(0,26):
             self.assertTrue(target.is_valid_number(str(i)))
         
+    def test_convert_letter(self):
+        target = IOUtils()
 
-       
+        for i, c in enumerate(string.ascii_lowercase):
+            self.assertEqual(i, target.convert_letter(c))
