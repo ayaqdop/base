@@ -1,10 +1,32 @@
 class Field:
 
     def __init__(self):
-        self.field = []
+        self.field = self.prepare_field()
 
+    def prepare_field(self):
+        result = self.field_numbers()
+        self.field_letters(result)
+        self.field_clean_up(result)
+        return result
+        
+    def field_clean_up(self, field):
+        # Replace all unnecessary values with None
+        pass
+    
+    def field_letters(self, field):
+        # Add letter indices
+        pass
+    
+    def field_numbers(self):
+        result = []
+        for i in range(18):
+            row = []
+            for i in range(26):
+                row.append(i)
+            result.append(row)
+        return result
+        
     def print_field(self):
-        self.field = []
         field_len = []
         alp = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p']
         for i in range(16):
