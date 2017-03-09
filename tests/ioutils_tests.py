@@ -11,6 +11,10 @@ class IOTest(unittest.TestCase):
     def test_init(self):
         pass
 
+    def test_input_parser(self):
+        target = IOUtils()
+        self.assertEqual({'TO': {'X': 2, 'Y': 24}, 'FROM': {'X': 1, 'Y': 23}},target.input_parser("a23 b24"))
+
     def test_is_valid_letter_single_letters(self):
         target = IOUtils()
 

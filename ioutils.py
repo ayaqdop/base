@@ -5,8 +5,20 @@ import string
 class IOUtils:
 
 
-    def input_parser(self):
-        input_value = re.split('\W+',input("Enter positions: "))
+    def input_parser(self, input_value):
+        input_value = re.split('\W+',input("Enter positions: "))     
+        current_pos = input_value[0]
+        next_pos = input_value[1]
+        step = {}
+        step['FROM']={}
+        step['TO']={}
+        if(is_valid_position(current_pos) and is_valid_position(next_pos) and is_not_same_position(current_pos,next_pos)):
+            step['FROM']['X']=convert_letter(current_pos[0])
+            step['FROM']['Y']=current_pos[1:]
+            step['TO']['X']==convert_letter(next_pos[0])
+            step['TO']['Y']==next_pos[1:]
+        return step
+'''        input_value = re.split('\W+',input("Enter positions: "))
         
         if(input_value[0] == input_value[1] 
             or not input_value[0][0] in 'abcdefghijklmnopABCDEFGHIJKLMNOP' 
@@ -25,9 +37,8 @@ class IOUtils:
             input_value[0] = input_value[0][0].lower()+input_value[0][1:]
             input_value[1] = input_value[1][0].lower()+input_value[1][1:]
             print(input_value[0], input_value[1])
-            #current pos = {curX:input_value[0][0], curY:input_value[0][1:]}
-
-    def is_not_same_position(self, pos1,pos2):
+'''         #current pos = {curX:input_value[0][0], curY:input_value[0][1:]}
+    def is_not_same_position(self,pos1,pos2):
         return pos1 != pos2
             
     def is_valid_letter(self, letter):
