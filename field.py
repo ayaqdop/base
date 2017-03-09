@@ -20,4 +20,3 @@ class Field(object):
             for b in range(24):
                 print (a[b], '|', end = ' ')
             print ('\n','-'*98)
-Field().print_field()            
