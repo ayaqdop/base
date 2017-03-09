@@ -1,4 +1,4 @@
-class Player(object):
+class Player:
 
     MOVES_LEFT = 3
 
@@ -6,3 +6,6 @@ class Player(object):
         self.team = team
         self.number = number
         self.moves_left = Player.MOVES_LEFT
+
+    def __str__(self):
+        return str(self.number)

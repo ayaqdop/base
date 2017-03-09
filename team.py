@@ -1,4 +1,4 @@
-class Team(object):
+class Team:
 
     MOVES_LEFT = 5
 
