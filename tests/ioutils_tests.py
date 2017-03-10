@@ -15,7 +15,9 @@ class IOTest(unittest.TestCase):
         target = IOUtils()
         for i in "abcdefghijklmnop":
             for j in range(0,25):
-                self.assertEqual({'TO': {'X': 16, 'Y': 25}, 'FROM': {'X': target.convert_letter(i), 'Y': j}},target.input_parser(i+str(j)+" p25"))
+                self.assertEqual({'TO': {'X': 16, 'Y': 25}, 
+                    'FROM': {'X': target.convert_letter(i), 'Y': j}},
+                    target.input_parser(i+str(j)+" p25"))
     
     def test_is_valid_letter_single_letters(self):
         target = IOUtils()

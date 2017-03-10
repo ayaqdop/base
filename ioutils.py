@@ -4,7 +4,6 @@ import string
 
 class IOUtils:
 
-
     def input_parser(self, input_value):
         input_value = re.split('\W+',input_value)
         current_pos = input_value[0]
@@ -13,12 +12,14 @@ class IOUtils:
             and self.is_valid_position(next_pos)
             and self.is_not_same_position(current_pos,next_pos)):
             step={
-            'FROM':{'X': self.convert_letter(current_pos[0]), 'Y': int(current_pos[1:])},
-            'TO':{'X': self.convert_letter(next_pos[0]), 'Y': int(next_pos[1:])}
+            'FROM':{'X': self.convert_letter(current_pos[0]), 
+            'Y': int(current_pos[1:])},
+            'TO':{'X': self.convert_letter(next_pos[0]), 
+            'Y': int(next_pos[1:])}
             }
             return step
         else:
-            return self.convert_letter(current_pos[0]), int(current_pos[1:]), self.convert_letter(next_pos[0]), int(next_pos[1:])
+            return "Incorrect input, please retype your step"
 
     def is_not_same_position(self,pos1,pos2):
         return pos1 != pos2
