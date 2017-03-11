@@ -5,25 +5,24 @@ import string
 class IOUtils:
 
     def input_parser(self, input_value):
-        input_value = re.split("\W+",input_value)
+        input_value = re.split("\W+", input_value)
         current_position = input_value[0]
         next_position = input_value[1]
         if (self.is_valid_position(current_position)
             and self.is_valid_position(next_position)
-            and self.is_not_same_position(current_position,next_position)):
-            step = {
-                "FROM" : {
-                    "X": self.convert_letter(current_position[0]),
-                    "Y": int(current_position[1:])
-                },
-                "TO": {
-                    "X": self.convert_letter(next_position[0]),
-                    "Y": int(next_position[1:])
-                }
+            and self.is_not_same_position(current_position, next_position)):
+            return {
+                "FROM" : self.get_coordinate(current_position),
+                "TO" : self.get_coordinate(next_position)
             }
-            return step
         else:
             return None
+
+    def get_coordinate(self, position):
+        return {
+            "X": self.convert_letter(position[0]),
+            "Y": int(position[1:])
+        }
 
     def is_not_same_position(self, position1, position2):
         return position1 != position2
