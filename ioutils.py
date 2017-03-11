@@ -5,7 +5,7 @@ import string
 class IOUtils:
 
     def input_parser(self, input):
-        current, next = re.split("\W+", input)
+        current, next = re.split("\W+", input.lower())
         if (self.is_valid_position(current)
             and self.is_valid_position(next)
             and self.is_not_same_position(current, next)):
