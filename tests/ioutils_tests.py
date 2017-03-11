@@ -11,9 +11,18 @@ class IOTest(unittest.TestCase):
     def test_init(self):
         pass
 
+    def test_input_parser(self):
+        target = IOUtils()
+        for i in "abcdefghijklmnop":
+            for j in range(25):
+                self.assertEqual({
+                        "FROM": { "X" : target.convert_letter(i), "Y" : j },
+                        "TO": { "X" : 16, "Y": 25 }
+                    },
+                    target.input_parser("{}{} p25".format(i, j)))
+    
     def test_is_valid_letter_single_letters(self):
         target = IOUtils()
-
         for c in string.ascii_lowercase:
             if c < 'q':
                 self.assertTrue(target.is_valid_letter(c))
@@ -53,6 +62,5 @@ class IOTest(unittest.TestCase):
         
     def test_convert_letter(self):
         target = IOUtils()
-
         for i, c in enumerate(string.ascii_lowercase):
             self.assertEqual(i + 1, target.convert_letter(c))
