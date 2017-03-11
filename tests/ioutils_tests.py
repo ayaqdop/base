@@ -19,7 +19,7 @@ class IOTest(unittest.TestCase):
                         "FROM": { "X" : target.convert_letter(i), "Y" : j },
                         "TO": { "X" : 16, "Y": 25 }
                     },
-                    target.input_parser(i + str(j) + " p25"))
+                    target.input_parser("{}{} p25".format(i, j)))
     
     def test_is_valid_letter_single_letters(self):
         target = IOUtils()
