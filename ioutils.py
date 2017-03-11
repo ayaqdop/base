@@ -4,16 +4,14 @@ import string
 
 class IOUtils:
 
-    def input_parser(self, input_value):
-        input_value = re.split("\W+", input_value)
-        current_position = input_value[0]
-        next_position = input_value[1]
-        if (self.is_valid_position(current_position)
-            and self.is_valid_position(next_position)
-            and self.is_not_same_position(current_position, next_position)):
+    def input_parser(self, input):
+        current, next = re.split("\W+", input)
+        if (self.is_valid_position(current)
+            and self.is_valid_position(next)
+            and self.is_not_same_position(current, next)):
             return {
-                "FROM" : self.get_coordinate(current_position),
-                "TO" : self.get_coordinate(next_position)
+                "FROM" : self.get_coordinate(current),
+                "TO" : self.get_coordinate(next)
             }
         else:
             return None
