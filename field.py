@@ -8,13 +8,14 @@ class Field:
         self.field_letters(result)
         self.field_clean_up(result)
         return result
-        
+
     def field_clean_up(self, field):
-        # Replace all unnecessary values with None
-        pass
-    
+        for i in range (1,17):
+            for j in range(1,25):
+                field[i][j] = None
+        return field
+
     def field_letters(self, field):
-        # Add letter indices
         for i, c in enumerate(" abcdefghijklmnop "):
             field[i][0] = c
             field[i][25] = c
@@ -37,7 +38,7 @@ class Field:
                 field_len.append(" ")
             self.field.append(field_len)
             field_len = []
-    
+
         print ('    0','  1','  2','  3','  4','  5','  6','  7','  8','  9','  10',' 11',' 12',' 13',' 14',' 15',' 16',' 17',' 18',' 19',' 20',' 21',' 22',' 23')
         print (' '+'-'*98)
         for a,d in zip(self.field,alp):
