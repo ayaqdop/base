@@ -1,5 +1,3 @@
-import sys
-
 BLACK = "\033[1;30m"
 RED = "\033[1;31m"
 GREEN = "\033[1;32m"
@@ -13,7 +11,5 @@ RESET = "\033[0;0m"
 
 class Console:
 
-    def colored_print(self, text, color, end=''):
-        sys.stdout.write(color)
-        print(text, end=end)
-        sys.stdout.write(RESET)
+    def color(self, text, color):
+        return color + str(text) + RESET

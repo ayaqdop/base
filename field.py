@@ -34,5 +34,14 @@ class Field:
         return result
 
     def print_field(self):
-        for i in self.field:
-            self.console.colored_print(i, console.CYAN, "\n")
+        result = ""
+        for row in self.field:
+            for item in row:
+                result += "| "
+                if item is None:
+                    result += " "
+                else:
+                    result += self.console.color(item, console.CYAN)
+                result += " |"
+            result += "\n"
+        print(result)
