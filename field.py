@@ -15,17 +15,20 @@ class Field:
     
     def field_letters(self, field):
         # Add letter indices
-        pass
-    
+        for i, c in enumerate(" abcdefghijklmnop "):
+            field[i][0] = c
+            field[i][25] = c
+        return field
+
     def field_numbers(self):
         result = []
         for i in range(18):
             row = []
-            for i in range(26):
-                row.append(i)
+            for j in range(26):
+                row.append(j)
             result.append(row)
         return result
-        
+
     def print_field(self):
         field_len = []
         alp = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p']
