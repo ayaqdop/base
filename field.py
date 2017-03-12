@@ -1,7 +1,10 @@
+import console
+
 class Field:
 
     def __init__(self):
         self.field = self.prepare_field()
+        self.console = console.Console()
 
     def prepare_field(self):
         result = self.field_numbers()
@@ -31,18 +34,5 @@ class Field:
         return result
 
     def print_field(self):
-        field_len = []
-        alp = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p']
-        for i in range(16):
-            for row in range(24):
-                field_len.append(" ")
-            self.field.append(field_len)
-            field_len = []
-
-        print ('    0','  1','  2','  3','  4','  5','  6','  7','  8','  9','  10',' 11',' 12',' 13',' 14',' 15',' 16',' 17',' 18',' 19',' 20',' 21',' 22',' 23')
-        print (' '+'-'*98)
-        for a,d in zip(self.field,alp):
-            print (d,'|', end = ' ')
-            for b in range(24):
-                print (a[b], '|', end = ' ')
-            print ('\n','-'*98)
+        for i in self.field:
+            self.console.colored_print(i, console.CYAN, "\n")
