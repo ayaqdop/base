@@ -4,7 +4,7 @@ from field import Field
 
 class Game:
 
-    def __init__(self):
+    def __init__(self, player1, player2):
         self.time_limit = 0
         self.score_limit = 0
         self.turn = None

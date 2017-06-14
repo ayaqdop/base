@@ -10,7 +10,9 @@ from field import Field
 class GameTest(unittest.TestCase):
 
     def test_init(self):
-        target = Game()
+        player1 = "Quanysh"
+        player2 = "Olzhas"
+        target = Game(player1, player2)
 
         self.assertEqual(0, target.time_limit)
         self.assertEqual(0, target.score_limit)
