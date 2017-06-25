@@ -37,11 +37,11 @@ class Field:
         result = ""
         for row in self.field:
             for item in row:
-                result += "| "
+                result += "|"
                 if item is None:
-                    result += " "
+                    result += "  "
                 else:
-                    result += self.console.color(item, console.CYAN)
-                result += " |"
+                    result += str(item).ljust(2) #self.console.color(item, console.CYAN)
+                result += "|"
             result += "\n"
         print(result)
