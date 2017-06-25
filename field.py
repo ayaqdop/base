@@ -42,6 +42,5 @@ class Field:
                     result += "  "
                 else:
                     result += str(item).ljust(2) #self.console.color(item, console.CYAN)
-                result += "|"
-            result += "\n"
+            result += "|\n"
         print(result)
