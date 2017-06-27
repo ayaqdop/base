@@ -43,4 +43,7 @@ class Field:
                 else:
                     result += str(item).ljust(2) #self.console.color(item, console.CYAN)
             result += "|\n"
+            for item in row:
+                result += "---"
+            result += "|\n"
         print(result)
