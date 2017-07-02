@@ -41,9 +41,6 @@ class Field:
                 if item is None:
                     result += "  "
                 else:
-                    result += str(item).ljust(2) #self.console.color(item, console.CYAN)
-            result += "|\n"
-            for item in row:
-                result += "---"
-            result += "|\n"
+                    result += self.console.color(str(item).ljust(2), console.CYAN)
+            result += "|\n" + (len(row) * 3 * "-")  + "-\n"
         print(result)
