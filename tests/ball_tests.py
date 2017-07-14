@@ -1,12 +1,8 @@
-import unittest
-import sys
-
-sys.path.insert(0, "/home/ayaqdop/base")
-
+from unittest import TestCase
 from ball import Ball
 
-class BallTest(unittest.TestCase):
 
+class BallTest(TestCase):
     def test_init(self):
         target = Ball()
         self.assertIsInstance(target.possible_moves, list)

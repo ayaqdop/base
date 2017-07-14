@@ -1,12 +1,8 @@
-import unittest
-import sys
-
-sys.path.insert(0, "/home/ayaqdop/base")
-
+from unittest import TestCase
 from team import Team
 
-class TeamTest(unittest.TestCase):
 
+class TeamTest(TestCase):
     def test_init(self):
         name = "Real Madrid"
         formation = "4-4-2"

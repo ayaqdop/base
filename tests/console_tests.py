@@ -1,14 +1,10 @@
-import unittest
-import sys
 import io
+from unittest import TestCase
 from contextlib import redirect_stdout
-
-sys.path.insert(0, "home/ayaqdop/base")
-
 import console
 
-class ConsoleTest(unittest.TestCase):
 
+class ConsoleTest(TestCase):
     def test_colored_print_constants(self):
         self.assertEqual("\033[1;30m", console.BLACK)
         self.assertEqual("\033[1;31m", console.RED)
