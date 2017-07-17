@@ -1,12 +1,8 @@
-import unittest
-import sys
-
-sys.path.insert(0, "/home/ayaqdop/base")
-
+from unittest import TestCase
 from player import Player
 
-class PlayerTest(unittest.TestCase):
 
+class PlayerTest(TestCase):
     def test_init(self):
         team = "Test Team"
         number = 42

@@ -1,14 +1,10 @@
-import unittest
-import sys
-
-sys.path.insert(0, "/home/ayaqdop/base")
-
+from unittest import TestCase
 from game import Game
 from ball import Ball
 from field import Field
 
-class GameTest(unittest.TestCase):
 
+class GameTest(TestCase):
     def test_init(self):
         target = Game()
 

@@ -1,13 +1,9 @@
-import unittest
-import sys
+from unittest import TestCase
 import string
-
-sys.path.insert(0, "/home/ayaqdop/base")
-
 from ioutils import IOUtils 
 
-class IOTest(unittest.TestCase):
 
+class IOTest(TestCase):
     def test_init(self):
         pass
 

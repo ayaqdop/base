@@ -1,12 +1,8 @@
-import unittest
-import sys
-
-sys.path.insert(0, "/home/ayaqdop/base")
-
+from unittest import TestCase
 from field import Field
 
-class FieldTest(unittest.TestCase):
 
+class FieldTest(TestCase):
     def test_init(self):
         target = Field()
         self.assertIsInstance(target.field, list)
